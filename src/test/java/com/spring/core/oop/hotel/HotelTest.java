@@ -14,7 +14,10 @@ class HotelTest {
         ApplicationContext ct
                 = new AnnotationConfigApplicationContext(HotelFactory.class);
         Hotel hotel = ct.getBean(Hotel.class);
+
+        System.out.println("\n================================");
         hotel.reserve();
+        System.out.println("================================");
     }
 
 }

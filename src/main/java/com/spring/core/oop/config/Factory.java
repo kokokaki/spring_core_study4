@@ -16,7 +16,10 @@ public class Factory {
     }
     //회원컨트롤러 객체를 만드는 기능
     public MemberController memberController() {
-        return new MemberController(memberRepository());
+        MemberController mc = new MemberController();
+        mc.setMemberRepository(memberRepository());
+        return mc;
+        //return new MemberController(memberRepository());
     }
     //주문컨트롤러 객체를 만드는 기능
     public OrderController orderController() {

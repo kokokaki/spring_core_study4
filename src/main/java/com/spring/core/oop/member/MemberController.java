@@ -3,9 +3,16 @@ package com.spring.core.oop.member;
 //책임: 적당한 회원 저장소에 저장 및 조회 명령을 내려야 한다.
 public class MemberController {
 
-    private MemberRepository memberRepository;
+    public MemberRepository memberRepository;
+
+    public MemberController() {
+    }
 
     public MemberController(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
+
+    public void setMemberRepository(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
 
